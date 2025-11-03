@@ -1,4 +1,4 @@
-##🌟 Project Overview 
+## 🌟 Project Overview 
 This project demonstrates a complete end-to-end Machine Learning pipeline for customer segmentation and classification. It's designed to help businesses gain deep insight into customer behavior to enable personalized and highly effective marketing strategies.
 
 The pipeline involves two core ML phases:

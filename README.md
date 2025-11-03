@@ -32,11 +32,11 @@ Prerequisites
    cd customer-segmentation-ml-app
 2. Create and Activate a Virtual Environment
 It's highly recommended to use a virtual environment to manage dependencies:
-    # Create the environment
+     [Create the environment]:
         python -m venv venv
-    # Activate the environment (macOS/Linux)
+     [Activate the environment (macOS/Linux)]:
         source venv/bin/activate
-    # Activate the environment (Windows)
+    [Activate the environment (Windows)]:
         venv\Scripts\activate
 3. Install Dependencies
 All required dependencies are listed in the requirements.txt file.
@@ -82,18 +82,18 @@ The project is structured into modular code in Src and documented in the Noteboo
 | App Deployment | Streamlit 
 | Environment | Python 3.9+
 
-## 📁 Project Structurecustomer_segmentation_classification/
-│
+## 📁 Project Structure
+customer_segmentation_classification/
 ├── App/
-│   └── app.py                       # Streamlit web app for model deployment
+│   └── app.py                      # Streamlit web app for model deployment
 ├── Data/
-│   ├── raw/                         # Raw dataset
-│   └── processed/                   # Cleaned & transformed data
-├── Model/                           # Stores saved models and scaler
-│   ├── scaler.pkl                   
-│   ├── kmeans.pkl                   
-│   └── classifier.pkl               
-├── Notebooks/                       # EDA and ML training scripts
-├── Src/                             # Modular Python functions
-├── requirements.txt                 # Project dependencies
-└── README.md                        # Project documentation
+│   ├── raw/                        # Raw dataset
+│   └── processed/                  # Cleaned & transformed data
+├── Model/                          # Stores saved models and scaler
+│   ├── scaler.pkl
+│   ├── kmeans.pkl
+│   └── classifier.pkl
+├── Notebooks/                      # EDA and ML training scripts
+├── Src/                            # Modular Python functions
+├── requirements.txt                # Project dependencies
+└── README.md                       # Project documentation

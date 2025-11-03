@@ -14,7 +14,7 @@ Businesses often have customer data but lack clear, actionable insights into cus
 
 ## 🚀 Streamlit App Features & Demo
 The application provides a clean, interactive interface with real-time prediction output. 
- * Interactive Input: Users can enter Gender, Age, Annual Income ($\text{k}$), and Spending Score ($\text{1–100}$) via sliders and dropdowns.
+ * Interactive Input: Users can enter Gender, Age, Annual Income <br> ($\text{k}$), and Spending Score ($\text{1–100}$) via sliders and dropdowns.
  * Prediction Tab: View the predicted customer segment in real-time.Clean UI:
  * Modern design featuring tabs and a sidebar for a clean user experience.
 
@@ -22,23 +22,23 @@ The application provides a clean, interactive interface with real-time predictio
 Prerequisites
  * Python 3.9+1.
 1. Clone the Repository
-   git clone [https://github.com/Alexmarco-gif/Customer-Segmentation-ml-app.git](https://github.com/Alexmarco-gif/Customer-Segmentation-ml-app.git)
+   git clone [https://github.com/Alexmarco-gif/Customer-Segmentation-ml-app.git](https://github.com/Alexmarco-gif/Customer-Segmentation-ml-app.git) <br>
    `cd customer-segmentation-ml-app`
 2. Create and Activate a Virtual Environment
-It's highly recommended to use a virtual environment to manage dependencies:
-     [Create the environment]:
-        `python -m venv venv`
-     [Activate the environment (macOS/Linux)]:
-        `source venv/bin/activate`
-    [Activate the environment (Windows)]:
-        `venv\Scripts\activate`
+It's highly recommended to use a virtual environment to manage dependencies: <br>
+     [Create the environment]:<br>
+        `python -m venv venv`<br>
+     [Activate the environment (macOS/Linux)]:<br>
+        `source venv/bin/activate`<br>
+    [Activate the environment (Windows)]:<br>
+        `venv\Scripts\activate`<br>
 3. Install Dependencies
-All required dependencies are listed in the requirements.txt file.
-  `pip install -r requirements.txt`
+All required dependencies are listed in the requirements.txt file.<br>
+  `pip install -r requirements.txt`<br>
 4. Run the Streamlit App
-Navigate to the App/ directory and run the application:
-`cd App/`
-`streamlit run app.py`
+Navigate to the App/ directory and run the application:<br>
+`cd App/`<br>
+`streamlit run app.py`<br>
 Your web browser should automatically open the Streamlit application at http://localhost:8501.
 
 ## 👩‍💻 Code Process: How the ML Pipeline Works 
@@ -47,20 +47,23 @@ The project is structured into modular code in `Src` and documented in the `Note
    * Dataset: Uses the Mall Customer Segmentation Dataset (Kaggle).
    * Data Preparation: Handles missing values and encodes categorical features (e.g., Gender $\rightarrow$ 0/1).
    * Scaling: Numeric features are scaled using StandardScaler.
-   * Feature Engineering: Created behavior-based features:
+   * Feature Engineering: Created behavior-based features: <br>
      $Spending\_Efficiency = \frac{Spending\_Score}{Annual\_Income + 1}$$Income\_Spend\_Interaction = Annual\_Income \times Spending\_Score$
+     
 2. Segmentation (Unsupervised) `02_clustering.ipynb`
    * Model: K-Means clustering is applied to group customers.
    * Optimization: The optimal number of clusters ($k$) is determined using the Elbow Method and Silhouette Score.
    * Labeling: Cluster labels are used as the target variable ($y$) for the subsequent classification step.
    * Persistence: The trained KMeans model is saved as kmeans.pkl.
+
 3. Classification (Supervised) `03_classification.ipynb`
    * Models: Random Forest and XGBoost are used and evaluated.
-   * Evaluation: XGBoost achieved the best overall performance.
+   * Evaluation: XGBoost achieved the best overall performance. <br>
      | Model | Accuracy | F1-Score |
      | Random Forest | 0.90 | 0.89|
      | XGBoost | 0.94 ✅ | 0.93 ✅ |
    * Persistence: The final classification model is saved as classifier.pkl using joblib.
+
 4. Model Deployment `App/app.py`
  * Framework: Streamlit is used for the web interface.
  * Prediction: The app loads the saved models and uses user input to generate real-time customer segment predictions.

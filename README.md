@@ -90,3 +90,7 @@ The project is structured into modular code in `Src` and documented in the `Note
 | Src  | Modular python function |
 | requirements.txt |  Project dependencies |
 | README.md | Project Documentation |
+
+
+
+![Project Screenshot](customer_segmentation.jpg)

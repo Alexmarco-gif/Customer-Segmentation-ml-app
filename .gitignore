@@ -1,0 +1,19 @@
+# Virtual environment
+venv/
+__pycache__/
+
+# Model and data files
+*.pkl
+*.csv
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# VSCode / IDE files
+.vscode/
+.DS_Store
+
+# Streamlit cache
+.streamlit/
+# Logs
+logs/*.log

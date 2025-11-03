@@ -74,16 +74,17 @@ The project is structured into modular code in Src and documented in the Noteboo
 
 
 ## 🧰 Tools & Libraries 
-| Stage | Libraries Used
-| Data Handling | Pandas, NumPy
-| Visualization | Matplotlib, Seaborn, Plotly
-| ML Models |Scikit-learn, XGBoostModel 
-| Storage | Joblib
-| App Deployment | Streamlit 
-| Environment | Python 3.9+
+| Stage | Libraries Used |
+| :--- | :--- |
+| Data Handling | Pandas, NumPy |
+| Visualization | Matplotlib, Seaborn, Plotly|
+| ML Models |Scikit-learn, XGBoostModel |
+| Storage | Joblib|
+| App Deployment | Streamlit |
+| Environment | Python 3.9+|
 
 ## 📁 Project Structure
-{ File | Description |
+| File | Description |
 | :--- | :--- |
 | `App` | Streamlit web app for model deployment |
 | `Data` | Dataset used both raw and cleaned and transformed data |

@@ -17,57 +17,51 @@ The application provides a clean, interactive interface with real-time predictio
  * Interactive Input: Users can enter Gender, Age, Annual Income ($\text{k}$), and Spending Score ($\text{1–100}$) via sliders and dropdowns.
  * Prediction Tab: View the predicted customer segment in real-time.Clean UI:
  * Modern design featuring tabs and a sidebar for a clean user experience.
-Key Libraries Used
-| Development | Python 3.9+
-| ML/Data Science | Scikit-learn
-| App Framework | Streamlit
-| Model Persistence | Joblib
-
 
 ## 💻 Getting Started: Installation and Setup 
 Prerequisites
  * Python 3.9+1.
 1. Clone the Repository
    git clone [https://github.com/Alexmarco-gif/Customer-Segmentation-ml-app.git](https://github.com/Alexmarco-gif/Customer-Segmentation-ml-app.git)
-   cd customer-segmentation-ml-app
+   `cd customer-segmentation-ml-app`
 2. Create and Activate a Virtual Environment
 It's highly recommended to use a virtual environment to manage dependencies:
      [Create the environment]:
-        python -m venv venv
+        `python -m venv venv`
      [Activate the environment (macOS/Linux)]:
-        source venv/bin/activate
+        `source venv/bin/activate`
     [Activate the environment (Windows)]:
-        venv\Scripts\activate
+        `venv\Scripts\activate`
 3. Install Dependencies
 All required dependencies are listed in the requirements.txt file.
-  pip install -r requirements.txt
+  `pip install -r requirements.txt`
 4. Run the Streamlit App
 Navigate to the App/ directory and run the application:
-cd App/
-streamlit run app.py
+`cd App/`
+`streamlit run app.py`
 Your web browser should automatically open the Streamlit application at http://localhost:8501.
 
 ## 👩‍💻 Code Process: How the ML Pipeline Works 
-The project is structured into modular code in Src and documented in the Notebooks.
-1. Data Collection & Preprocessing (01_data_preprocessing.ipynb)
+The project is structured into modular code in `Src` and documented in the `Notebooks`.
+1. Data Collection & Preprocessing `01_data_preprocessing.ipynb`
    * Dataset: Uses the Mall Customer Segmentation Dataset (Kaggle).
    * Data Preparation: Handles missing values and encodes categorical features (e.g., Gender $\rightarrow$ 0/1).
    * Scaling: Numeric features are scaled using StandardScaler.
    * Feature Engineering: Created behavior-based features:
      $Spending\_Efficiency = \frac{Spending\_Score}{Annual\_Income + 1}$$Income\_Spend\_Interaction = Annual\_Income \times Spending\_Score$
-2. Segmentation (Unsupervised) (02_clustering.ipynb)
+2. Segmentation (Unsupervised) `02_clustering.ipynb`
    * Model: K-Means clustering is applied to group customers.
    * Optimization: The optimal number of clusters ($k$) is determined using the Elbow Method and Silhouette Score.
    * Labeling: Cluster labels are used as the target variable ($y$) for the subsequent classification step.
    * Persistence: The trained KMeans model is saved as kmeans.pkl.
-3. Classification (Supervised) (03_classification.ipynb)
+3. Classification (Supervised) `03_classification.ipynb`
    * Models: Random Forest and XGBoost are used and evaluated.
    * Evaluation: XGBoost achieved the best overall performance.
-     Model | Accuracy | F1-Score
-     Random Forest | 0.90 | 0.89
-     | XGBoost | 0.94 ✅ | 0.93 ✅
+     | Model | Accuracy | F1-Score |
+     | Random Forest | 0.90 | 0.89|
+     | XGBoost | 0.94 ✅ | 0.93 ✅ |
    * Persistence: The final classification model is saved as classifier.pkl using joblib.
-4. Model Deployment (App/app.py)
+4. Model Deployment `App/app.py`
  * Framework: Streamlit is used for the web interface.
  * Prediction: The app loads the saved models and uses user input to generate real-time customer segment predictions.
 
@@ -86,10 +80,10 @@ The project is structured into modular code in Src and documented in the Noteboo
 ## 📁 Project Structure
 | File | Description |
 | :--- | :--- |
-| `App` | Streamlit web app for model deployment |
-| `Data` | Dataset used both raw and cleaned and transformed data |
-| ` Model ` | Stores saved models and scaler |
-| `Notebooks` | EDA and ML training scripts |
-| `Src ` | Modular python function |
-| `requirements.txt  ` |  Project dependencies |
-| ` README.md ` | Project Documentation |
+| App | Streamlit web app for model deployment |
+| Data | Dataset used both raw and cleaned and transformed data |
+|  Model | Stores saved models and scaler |
+| Notebooks | EDA and ML training scripts |
+| Src  | Modular python function |
+| requirements.txt |  Project dependencies |
+| README.md | Project Documentation |

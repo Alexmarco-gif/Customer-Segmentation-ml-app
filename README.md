@@ -83,17 +83,12 @@ The project is structured into modular code in Src and documented in the Noteboo
 | Environment | Python 3.9+
 
 ## 📁 Project Structure
-customer_segmentation_classification/
-├── App/
-│   └── app.py                      # Streamlit web app for model deployment
-├── Data/
-│   ├── raw/                        # Raw dataset
-│   └── processed/                  # Cleaned & transformed data
-├── Model/                          # Stores saved models and scaler
-│   ├── scaler.pkl
-│   ├── kmeans.pkl
-│   └── classifier.pkl
-├── Notebooks/                      # EDA and ML training scripts
-├── Src/                            # Modular Python functions
-├── requirements.txt                # Project dependencies
-└── README.md                       # Project documentation
+{ File | Description |
+| :--- | :--- |
+| `App` | Streamlit web app for model deployment |
+| `Data` | Dataset used both raw and cleaned and transformed data |
+| ` Model ` | Stores saved models and scaler |
+| `Notebooks` | EDA and ML training scripts |
+| `Src ` | Modular python function |
+| `requirements.txt  ` |  Project dependencies |
+| ` README.md ` | Project Documentation |
